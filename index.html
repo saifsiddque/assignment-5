@@ -57,6 +57,11 @@
         width: 100%;
         
     }
+    footer{
+        border-top: 1px solid white;
+        color: white;
+        padding: 30px 0px;
+    }
     
 </style>
 <body>
@@ -76,9 +81,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="images.jfif" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Lionel Messi </h5>
+                          <h5 id="lionelMessi" class="card-title">Lionel Messi </h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="lionelMessi-btn" class="btn btn-primary w-100 rounded-0">SELECT</button>
                         </div>
                       </div>
                 </div>
@@ -87,9 +92,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="download (1).jfif" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Neymar Jr</h5>
+                          <h5 id="neymar" class="card-title">Neymar Jr</h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="naymar-btn" class="btn btn-primary w-100 rounded-0">SELECT</button>
 
                         </div>
                       </div>
@@ -98,9 +103,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="Kylian-Mbappe-4.jpeg" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Kylian Mbappé</h5>
+                          <h5 id="Kylian" class="card-title">Kylian Mbappé</h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="Kylian-btn"  class="btn btn-primary w-100 rounded-0">SELECT</button>
 
                         </div>
                       </div>
@@ -108,14 +113,10 @@
                 <div class="col-3 " style="padding-left: 50px;">
                     <div class="content text-center " style="background-color: black; color: white; padding: 20px 10px;">
                         <h3>Selected - V</h3>
-                        <ol>
-                            <li>Lionel Messi</li>
-                            <li>Lionel Messi</li>
-                            <li>Lionel Messi</li>
-                            <li>Lionel Messi</li>
-                            <li>Lionel Messi</li>
+                        <ol id="playerlist">
+                            
                         </ol>
-                    </div>
+                    </div>  
                 </div>
             </div> <br>
             <div class="row gx-5">
@@ -123,9 +124,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="download (2).jfif" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Vítor Machado </h5>
+                          <h5 id="Machado" class="card-title">Vítor Machado </h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="Machado-btn" class="btn btn-primary w-100 rounded-0">SELECT</button>
 
                         </div>
                       </div>
@@ -134,9 +135,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="sanches.jpg" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Sergio Ramos </h5>
+                          <h5 id="Sergio" class="card-title">Sergio Ramos </h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="Sergio-btn" class="btn btn-primary w-100 rounded-0">SELECT</button>
 
                         </div>
                       </div>
@@ -145,9 +146,9 @@
                     <div class="card" style="width: 18rem;">
                         <img src="ronaldo.jpg" class="card-img-top img-fluid w-100" alt="...">
                         <div class="card-body">
-                          <h5 class="card-title">Cristiano Ronaldo </h5>
+                          <h5 id="Cristiano" class="card-title">Cristiano Ronaldo </h5>
                           <p class="card-text">36 Goals - 120 Assist</p>
-                          <button class="btn btn-primary w-100 rounded-0">SELECT</button>
+                          <button id="Cristiano-btn" class="btn btn-primary w-100 rounded-0">SELECT</button>
 
                         </div>
                       </div>
@@ -155,20 +156,25 @@
                 <div class="col-3" style="padding-left: 50px;">
                     <div class="content " style="background-color: black; color: white; padding: 20px 10px;">
                         <h3 class="text-center">Budget</h3>
-                        <h6><span>Per player</span> <input type="text" class="w-50 "></h6>
-                        <button class="btn btn-primary w-100 rounded-0">Calculate</button>
-                        <h6>Player Expenses <span class="float-end">$5000</span></h6>
-                        <h6><span>Manager</span> <input type="text" class="w-50 "></h6>
-                        <h6><span>Coach</span> <input type="text" class="w-50 "></h6>
-                        <button class="btn btn-primary w-100 rounded-0">Calculate</button>
-                        <h6>Total <span class="float-end"><u>$5000</u></span></h6>
+                        <h6><span>Per player</span> <input id="player" type="text" class="w-50 "></h6>
+                        <button id="calculate" class="btn btn-primary w-100 rounded-0">Calculate</button>
+                        <h6>Player Expenses <span class="float-end">$<span id="player-expens">5000</span></span></h6>
+                        <h6><span>Manager</span> <input id="manager" type="text" class="w-50 "></h6>
+                        <h6><span>Coach</span> <input id="coach" type="text" class="w-50 "></h6>
+                        <button id="total-calculate" class="btn btn-primary w-100 rounded-0">Calculate Total</button>
+                        <h6>Total <span class="float-end"><u>$<span id="total">5000</span></u></span></h6>
 
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br><br><br>
 
     </section>
+    <footer class="bg-dark text-center">
+        <h5>Copyright @ 2022 All Rights Reserved.</h5>
+
+    </footer>
+    <script src="js/main.js"></script>
     
 </body>
 </html>
