@@ -31,14 +31,11 @@ function scelect(scelectid){
     const li = document.createElement('li');
     li.innerText = scelectorid.innerText;
     playerlist.appendChild(li);
-    const lenght = document.getElementById("playerlist").getElementsByTagName("li").length;
-    if(lenght > 5){
+    const lenghts = document.getElementById("playerlist").getElementsByTagName("li").length;
+    if(lenghts > 5){
         alert("Now you are CROSSING the limit!!");
-        return;
 
     };
-      
-    
 }
 console.log(length);
 document.getElementById('lionelMessi-btn').addEventListener('click',function(){
