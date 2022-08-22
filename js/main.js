@@ -37,7 +37,7 @@ function scelect(scelectid){
         return;
 
     };
-    
+      
     
 }
 console.log(length);
@@ -64,5 +64,5 @@ document.getElementById('Sergio-btn').addEventListener('click',function(){
 document.getElementById('Cristiano-btn').addEventListener('click',function(){
     scelect('Cristiano');
     document.getElementById("Cristiano-btn").disabled = true;
-})
+}) 
 
